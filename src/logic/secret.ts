@@ -1,6 +1,5 @@
+import { baseChars } from './baseChars.js'
 export type Base = 2 | 8 | 10 | 16
-
-const baseChars: string[] = Array.from('0123456789abcdef')
 
 export function generateSecret(
     length: number,
