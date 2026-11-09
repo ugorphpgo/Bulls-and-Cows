@@ -1,0 +1,38 @@
+{
+    "name": "bulls-and-cows",
+    "version": "1.0.0",
+    "description": "Bulls and cows game",
+    "type": "module",
+    "scripts": {
+        "build": "tsc -p tsconfig.build.json && node -e \"const fs=require('fs');for(const f of ['index.html','styles.css'])fs.copyFileSync('public/'+f,'dist/'+f)\"",
+        "test": "vitest run --passWithNoTests",
+        "format": "prettier --write .",
+        "lint": "eslint . ",
+        "prepare": "husky"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ugorphpgo/Bulls-and-Cows.git"
+    },
+    "private": true,
+    "devDependencies": {
+        "@eslint/js": "^10.0.1",
+        "eslint": "^10.13.0",
+        "globals": "^17.13.0",
+        "husky": "^9.1.7",
+        "lint-staged": "^17.6.0",
+        "prettier": "^3.9.10",
+        "typescript": "^6.0.3",
+        "typescript-eslint": "^8.72.1",
+        "vitest": "^5.1.0"
+    },
+    "lint-staged": {
+        "*.ts": [
+            "eslint",
+            "prettier --check"
+        ],
+        "*.{html,css,md}": [
+            "prettier --check"
+        ]
+    }
+}
