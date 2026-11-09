@@ -4,6 +4,7 @@
     "description": "Bulls and cows game",
     "type": "module",
     "scripts": {
+        "build": "tsc -p tsconfig.build.json && node -e \"const fs=require('fs');for(const f of ['index.html','styles.css'])fs.copyFileSync('public/'+f,'dist/'+f)\"",
         "test": "vitest run --passWithNoTests",
         "format": "prettier --write .",
         "lint": "eslint . ",

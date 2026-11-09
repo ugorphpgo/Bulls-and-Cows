@@ -21,6 +21,10 @@ export default defineConfig(
         rules: {
             '@typescript-eslint/no-explicit-any': 'error',
             'no-console': 'error',
+            '@typescript-eslint/restrict-template-expressions': [
+                'error',
+                { allowNumber: true },
+            ],
         },
     },
     {

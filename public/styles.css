@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    background: #f6f4ef;
+    color: #1f1d1a;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.app {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 24px 16px;
+}
+
+.settings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: flex-end;
+    margin-bottom: 24px;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 14px;
+    color: #6b665e;
+}
+
+.select,
+.input,
+.button {
+    font: inherit;
+    padding: 8px 12px;
+    border: 1px solid #d9d4ca;
+    border-radius: 8px;
+    background: #fff;
+    color: #1f1d1a;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.button--primary {
+    background: #b5462b;
+    border-color: #b5462b;
+    color: #fff;
+}
+
+.button:disabled,
+.input:disabled,
+.select:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+.guess {
+    display: flex;
+    gap: 8px;
+}
+
+.input {
+    flex: 1;
+    min-width: 0;
+    font-family: monospace;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.message {
+    min-height: 20px;
+    color: #b5462b;
+}
+
+.history,
+.records__list {
+    font-family: monospace;
+}
+
+.game {
+    margin-bottom: 24px;
+}
